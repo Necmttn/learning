@@ -25,7 +25,7 @@ var Cat = (function () {
       return console.log(`Cat ${this.name} has been clicked ${this.count}`)
     }
     var cat = {
-      name: name,
+      name: name, 
       img: './1.jpg',
       count: count,
       incrCount: incrCount,
@@ -72,17 +72,12 @@ var Cat = (function () {
         console.log('Clicked')
         renderCat(cat)
       })
-      console.log(catList)
-      // var newListItem = document.createElement('li');
-      //   newListItem.innerHTML = cat.name
-      //   newDiv.appendChild(newListItem)
       sidebar.childNodes[1].insertBefore(catList, sidebar.childNodes[1].nextSibling)
     })
   }
   // renderCat(Cats[0])
   return {
-    addNewCat,
-    renderCat
+    addNewCat
   }
 })()
 Cat = window.Cat
