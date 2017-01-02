@@ -1,8 +1,7 @@
 var app = document.getElementById('app')
 
 var SIDEBAR = create(`<div id="sidebar"><h1>SideBar</h1><ul></ul></div>`)
-app.appendChild(SIDEBAR)
-var sidebar = document.getElementById('sidebar')
+
 
 var CONTAINER = create(`<div id="container"></div>`)
 app.appendChild(CONTAINER)
