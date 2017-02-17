@@ -1,12 +1,17 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import createReducer from './reducers'
 import createLogger from 'redux-logger'
+import createSagaMiddleware from 'redux-saga'
 import { fromJS } from 'immutable'
+import mySaga from './containers/Drone/sagas'
 const logger = createLogger()
+const sagaMiddleware = createSagaMiddleware()
+
 
 export default function configureStore(initialState = {}, history ) {
   const middlewares = [
-    logger       
+    logger,
+    sagaMiddleware,     
   ]
 
   const enhancers = [
@@ -26,5 +31,6 @@ export default function configureStore(initialState = {}, history ) {
     fromJS(initialState),
     composeEnhancers(...enhancers)
   );
+  sagaMiddleware.run(mySaga)
   return store;
 }
