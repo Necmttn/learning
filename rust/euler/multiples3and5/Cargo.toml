@@ -1,0 +1,6 @@
+[package]
+name = "multiples3and5"
+version = "0.1.0"
+authors = ["Necmttn <necmettin.karakaya@gmail.com>"]
+
+[dependencies]
