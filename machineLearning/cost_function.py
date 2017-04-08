@@ -1,12 +1,25 @@
 from numpy import loadtxt, zeros, ones, array, linspace, logspace
 import  matplotlib.pyplot as plt
-
+'''
+you can learn more about it in here.
+https://www.coursera.org/learn/machine-learning/lecture/rkTp3/cost-function
+'''
 def compute_cost(X, y, theta):
     '''
     Comput cost for linear regression
     '''
     #Number of traning samples
     m = y.size
+    """
+    numpy.dot function gives
+    Dot product of two arrays.
+
+    F or 2-D arrays iet is equivalent to matrix multiplication, and for 1-D arrays to inner product
+    of vectors (without complex conjugation). For N dimensions it is a sum product over the
+    last axis of a and the second-to-last of b:
+
+    dot(a, b)[i,j,k,m] = sum(a[i,j,:] * b[k,:,m]
+    """
 
     predictions = X.dot(theta).flatten()
     sqErrors = (predictions - y) ** 2
@@ -24,6 +37,7 @@ def gradient_descent(X, y, theta, alpha, num_iters):
     m = y.size
     '''
     numpy.zeros creates a array made of 0
+    with shape we are deffining how it's should be.
     '''
     J_history = zeros(shape=(num_iters, 1))
 
@@ -82,6 +96,14 @@ predict1 = array([1, 3.5]).dot(theta).flatten()
 print('for population = 35,000 we predict a profit of %f' % (predict1 * 10000))
 predict2 = array([1, 7.0]).dot(theta).flatten()
 print('for population = 70,000 we predict a profit of %f' % (predict2 * 10000))
+
+print(J_history)
+
+fig = plt.figure()
+ax= fig.add_subplot(111)
+print(J_history[:, 0])
+# ax.plot(m, J_history[:, 0], marker='o', c='r')
+# TODO: try to draw predected numbers graph.
 
 result = it.dot(theta).flatten()
 plt.plot(data[:, 0], result)
