@@ -1,5 +1,7 @@
-[[https://github.com/Necmttn/learning/blob/master/banner.jpg|alt=HellYeah]]
+![HellYeah](https://github.com/Necmttn/learning/blob/master/banner.jpg)
 
+
+dasd
 # This Repo contains my learning files.
 
 currently i'm learning machine learning and python.
