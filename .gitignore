@@ -1,3 +1,4 @@
 /github
 /moduler-package-designer
-
+/machineLearning/universe/*
+!/machineLearning/universe/universe
