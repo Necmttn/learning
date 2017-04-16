@@ -1,4 +1,4 @@
-from numpy import loadtxt, zeros, ones, array, linspace, logspace
+from numpy import loadtxt, zeros, ones, array
 import  matplotlib.pyplot as plt
 '''
 you can learn more about it in here.
@@ -97,12 +97,11 @@ print('for population = 35,000 we predict a profit of %f' % (predict1 * 10000))
 predict2 = array([1, 7.0]).dot(theta).flatten()
 print('for population = 70,000 we predict a profit of %f' % (predict2 * 10000))
 
-print(J_history)
-
 fig = plt.figure()
 ax= fig.add_subplot(111)
-print(J_history[:, 0])
-# ax.plot(m, J_history[:, 0], marker='o', c='r')
+print(J_history[: m])
+print(m)
+ax.scatter([i for i in range(0, 97, 1)], J_history[: m], marker='o', c='r')
 # TODO: try to draw predected numbers graph.
 
 result = it.dot(theta).flatten()
