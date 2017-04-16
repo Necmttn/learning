@@ -77,7 +77,7 @@ determines if there is a distinct pair of numbers in the sequence whose
 product is odd.
 
 
-[**C-1.15**](../fifteen.py) Write a Python function that takes a sequence of numbers and determines
+[**C-1.15**](../main/fifteen.py) Write a Python function that takes a sequence of numbers and determines
 if all the numbers are different from each other (that is, they are distinct).
 
 
