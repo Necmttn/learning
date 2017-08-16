@@ -1,6 +1,3 @@
-[submodule "datascience/handbook"]
-	path = datascience/handbook
-	url = https://github.com/jakevdp/PythonDataScienceHandbook.git
 [submodule "datascience/ipython"]
 	path = datascience/ipython
 	url = https://github.com/necmttn/data-science-ipython-notebooks.git
