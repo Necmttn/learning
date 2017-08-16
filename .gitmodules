@@ -1,0 +1,3 @@
+[submodule "datascience/handbook"]
+	path = datascience/handbook
+	url = https://github.com/jakevdp/PythonDataScienceHandbook.git
